@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicación y División</title>
+    <script src="calculadoraJS" defer></script>
+</head>
+<body>
+    <h1>Multiplicación y División</h1>
+
+    <!-- Campo de texto para ingresar el primer número -->
+    <label for="num1">Número 1:</label>
+    <input type="text" id="num1" placeholder="Escribe el primer número">
+
+    <!-- Campo de texto para ingresar el segundo número -->
+    <label for="num2">Número 2:</label>
+    <input type="text" id="num2" placeholder="Escribe el segundo número">
+
+    <!-- Campo de texto para mostrar el resultado -->
+    <label for="resultado">Resultado:</label>
+    <input type="text" id="resultado" readonly placeholder="El resultado aparecerá aquí">
+
+    <!-- Botón para realizar la multiplicación -->
+    <button onclick="multiplicar()">Multiplicar</button>
+
+    <!-- Botón para realizar la división -->
+    <button onclick="dividir()">Dividir</button>
+</body>
+</html>

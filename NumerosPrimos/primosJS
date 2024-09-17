@@ -1,0 +1,41 @@
+function esPrimo(numero) {
+    if (numero <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Función para calcular los números primos entre 1 y el número ingresado
+function calcularPrimos() {
+    // Obtener el límite ingresado por el usuario
+    let limite = document.getElementById("limite").value;
+    limite = parseInt(limite);
+
+    // Referencia al párrafo donde se mostrará el resultado
+    let resultado = document.getElementById("resultado");
+
+    // Comprobar si el número es válido
+    if (isNaN(limite) || limite <= 1 || limite >= 100) {
+        resultado.innerHTML = "Por favor, introduce un número válido entre 1 y 100.";
+    } else {
+        // Crear un array para almacenar los números primos
+        let primos = [];
+        for (let i = 2; i <= limite; i++) {
+            if (esPrimo(i)) {
+                primos.push(i);
+            }
+        }
+
+        // Mostrar el resultado al usuario
+        if (primos.length > 0) {
+            resultado.innerHTML = `Los números primos entre 1 y ${limite} son: ${primos.join(", ")}`;
+        } else {
+            resultado.innerHTML = `No hay números primos entre 1 y ${limite}.`;
+        }
+    }
+}

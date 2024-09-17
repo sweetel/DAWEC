@@ -1,0 +1,29 @@
+function convertirMoneda() {
+    // Obtener la cantidad ingresada y el tipo de conversión seleccionado
+    let cantidad = document.getElementById("cantidad").value;
+    let conversion = document.getElementById("conversion").value;
+
+    // Convertir la cantidad a número
+    cantidad = parseFloat(cantidad);
+
+    // Referencia al párrafo donde se mostrará el resultado
+    let resultado = document.getElementById("resultado");
+
+    // Tasa de conversión aproximada
+    const euroADolar = 1.18; // 1 Euro = 1.18 Dólares (puedes ajustar esta tasa)
+    const dolarAEuro = 0.85; // 1 Dólar = 0.85 Euros (puedes ajustar esta tasa)
+
+    // Comprobar si es un número válido
+    if (isNaN(cantidad)) {
+        resultado.innerHTML = "Por favor, introduce una cantidad válida.";
+    } else {
+        // Realizar la conversión según el tipo seleccionado
+        if (conversion === "euros_a_dolares") {
+            let dolares = cantidad * euroADolar;
+            resultado.innerHTML = `${cantidad} Euros son ${dolares.toFixed(2)} Dólares.`;
+        } else if (conversion === "dolares_a_euros") {
+            let euros = cantidad * dolarAEuro;
+            resultado.innerHTML = `${cantidad} Dólares son ${euros.toFixed(2)} Euros.`;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Números Primos</title>
+    <script src="primosJS" defer></script>
+</head>
+<body>
+    <h1>Cálculo de Números Primos</h1>
+
+    <!-- Campo de texto para ingresar el número -->
+    <label for="limite">Introduce un número menor que 100:</label>
+    <input type="text" id="limite" placeholder="Escribe un número">
+
+    <!-- Botón para calcular los primos -->
+    <button onclick="calcularPrimos()">Calcular números primos</button>
+
+    <!-- Lugar donde se mostrará el resultado -->
+    <p id="resultado"></p>
+</body>
+</html>

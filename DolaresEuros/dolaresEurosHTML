@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Euros - Dólares</title>
+    <script src="dolaresEurJS" defer></script>
+</head>
+<body>
+    <h1>Conversor de Moneda</h1>
+
+    <!-- Campo de texto para ingresar la cantidad -->
+    <label for="cantidad">Cantidad:</label>
+    <input type="text" id="cantidad" placeholder="Escribe aquí la cantidad">
+
+    <!-- Selección del tipo de conversión -->
+    <label for="conversion">Convertir a:</label>
+    <select id="conversion">
+        <option value="euros_a_dolares">Euros a Dólares</option>
+        <option value="dolares_a_euros">Dólares a Euros</option>
+    </select>
+
+    <!-- Botón para ejecutar la conversión -->
+    <button onclick="convertirMoneda()">Convertir</button>
+
+    <!-- Lugar donde se mostrará el resultado -->
+    <p id="resultado"></p>
+</body>
+</html>

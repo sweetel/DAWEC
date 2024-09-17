@@ -1,0 +1,63 @@
+// Función para validar si el valor es numérico y positivo
+function validarValor(valor) {
+    return !isNaN(valor) && valor > 0;
+}
+
+// Función para realizar la multiplicación
+function multiplicar() {
+    // Obtener los valores de los campos de texto
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+
+    // Validar los valores
+    if (!validarValor(num1)) {
+        alert("El valor del primer número debe ser un número positivo.");
+        document.getElementById("num1").value = "";
+        return;
+    }
+    if (!validarValor(num2)) {
+        alert("El valor del segundo número debe ser un número positivo.");
+        document.getElementById("num2").value = "";
+        return;
+    }
+
+    // Realizar la multiplicación
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    let resultado = num1 * num2;
+
+    // Mostrar el resultado en la caja de texto
+    document.getElementById("resultado").value = resultado;
+}
+
+// Función para realizar la división
+function dividir() {
+    // Obtener los valores de los campos de texto
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+
+    // Validar los valores
+    if (!validarValor(num1)) {
+        alert("El valor del primer número debe ser un número positivo.");
+        document.getElementById("num1").value = "";
+        return;
+    }
+    if (!validarValor(num2)) {
+        alert("El valor del segundo número debe ser un número positivo.");
+        document.getElementById("num2").value = "";
+        return;
+    }
+    if (parseFloat(num2) === 0) {
+        alert("El divisor no puede ser cero.");
+        document.getElementById("num2").value = "";
+        return;
+    }
+
+    // Realizar la división
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    let resultado = num1 / num2;
+
+    // Mostrar el resultado en la caja de texto
+    document.getElementById("resultado").value = resultado;
+}
