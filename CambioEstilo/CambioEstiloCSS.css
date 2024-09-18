@@ -1,0 +1,34 @@
+/* Estilo del div principal */
+#divPrincipal {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Contenedor flex para organizar los divs como columnas */
+#contenedorDivs {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);  /* Tres columnas de igual tamaño */
+    grid-gap: 0px;                         /* Espaciado entre columnas */
+    margin-bottom: 20px;
+}
+
+/* Estilo de los tres divs que ahora son columnas */
+.colorDiv {
+    width: 30%;             /* Mantiene un tamaño fijo */
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilo del div de los radio buttons */
+#divOpciones {
+    display: flex;                /* Usamos Flexbox para el contenedor */
+    justify-content: center;      /* Centra los elementos horizontalmente */
+    gap: 20px;                    /* Espacio entre los radio buttons (opcional) */
+    margin-top: 20px; 
+}
