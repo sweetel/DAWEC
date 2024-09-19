@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehículos</title>
+  <style>
+    table {
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset id="fieldset">
+      <label for="nombre">Nombre: </label><input type="text" id="nombre">
+      <label for="apellidos">Apellidos: </label><input type="text" id="apellidos" size="35">
+      
+      <p>¿Tiene vehículo? </p>
+      <input type="radio" name="vehiculo" value="si" id="vehiculoSi"> Si
+      <input type="radio" name="vehiculo" value="no" id="vehiculoNo"> No
+      
+      <p>Vehículo favorito</p>
+      <input type="radio" name="tipoVehiculo" value="coche" id="coche" disabled> Coche
+      <input type="radio" name="tipoVehiculo" value="moto" id="moto" disabled> Moto
+      <input type="radio" name="tipoVehiculo" value="ambos" id="ambos" disabled> Ambos
+    </fieldset>
+  </form>
+
+  <div id="tablaContainer"></div>
+
+  <!-- Vinculación del archivo JavaScript -->
+  <script src="CambiosFormularioJS.js"></script>
+</body>
+</html>
