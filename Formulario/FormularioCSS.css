@@ -14,7 +14,7 @@ form {
 }
 
 fieldset {
-    border: 1px solid #2d08ff; /* Borde del fieldset */
+    border: 1px solid #ffef08; /* Borde del fieldset */
     padding: 20px; /* Espacio interno del fieldset */
     border-radius: 10px; /* Esquinas redondeadas */
 }
@@ -75,9 +75,22 @@ fieldset {
     padding: 5px; /* Espaciado interno del campo */
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Color del borde */
 }
+
+.form-group input:focus {
+    border: 2px solid #ffef08; /* Borde amarillo en hover y focus */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
 
 button {
     margin-top: 20px; /* Margen superior para el botón */
     padding: 10px 15px; /* Espaciado interno del botón */
+    border-radius: 10px; /* Bordes redondeados para el botón */
+    border: none; /* Sin borde */
+    background-color: #2d08ff; /* Fondo azul para el botón */
+    color: white; /* Texto blanco en el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
