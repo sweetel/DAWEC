@@ -9,17 +9,17 @@ function multiplicar() {
     let num1 = document.getElementById("num1").value;
     let num2 = document.getElementById("num2").value;
 
-    // Validar los valores
-    if (!validarValor(num1)) {
-        alert("El valor del primer número debe ser un número positivo.");
-        document.getElementById("num1").value = "";
-        return;
-    }
-    if (!validarValor(num2)) {
-        alert("El valor del segundo número debe ser un número positivo.");
-        document.getElementById("num2").value = "";
-        return;
-    }
+    // // Validar los valores
+    // if (!validarValor(num1)) {
+    //     alert("El valor del primer número debe ser un número positivo.");
+    //     document.getElementById("num1").value = "";
+    //     return;
+    // }
+    // if (!validarValor(num2)) {
+    //     alert("El valor del segundo número debe ser un número positivo.");
+    //     document.getElementById("num2").value = "";
+    //     return;
+    // }
 
     // Realizar la multiplicación
     num1 = parseFloat(num1);
@@ -36,22 +36,22 @@ function dividir() {
     let num1 = document.getElementById("num1").value;
     let num2 = document.getElementById("num2").value;
 
-    // Validar los valores
-    if (!validarValor(num1)) {
-        alert("El valor del primer número debe ser un número positivo.");
-        document.getElementById("num1").value = "";
-        return;
-    }
-    if (!validarValor(num2)) {
-        alert("El valor del segundo número debe ser un número positivo.");
-        document.getElementById("num2").value = "";
-        return;
-    }
-    if (parseFloat(num2) === 0) {
-        alert("El divisor no puede ser cero.");
-        document.getElementById("num2").value = "";
-        return;
-    }
+    // // Validar los valores
+    // if (!validarValor(num1)) {
+    //     alert("El valor del primer número debe ser un número positivo.");
+    //     document.getElementById("num1").value = "";
+    //     return;
+    // }
+    // if (!validarValor(num2)) {
+    //     alert("El valor del segundo número debe ser un número positivo.");
+    //     document.getElementById("num2").value = "";
+    //     return;
+    // }
+    // if (parseFloat(num2) === 0) {
+    //     alert("El divisor no puede ser cero.");
+    //     document.getElementById("num2").value = "";
+    //     return;
+    // }
 
     // Realizar la división
     num1 = parseFloat(num1);

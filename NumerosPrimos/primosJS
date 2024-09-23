@@ -1,3 +1,4 @@
+// Funcion para calcular si es primo
 function esPrimo(numero) {
     if (numero <= 1) {
         return false;

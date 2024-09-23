@@ -10,7 +10,7 @@ function convertirMoneda() {
     let resultado = document.getElementById("resultado");
 
     // Tasa de conversión aproximada
-    const euroADolar = 1.18; // 1 Euro = 1.18 Dólares (puedes ajustar esta tasa)
+    const euroADolar = 1.11; // 1 Euro = 1.18 Dólares (puedes ajustar esta tasa)
     const dolarAEuro = 0.85; // 1 Dólar = 0.85 Euros (puedes ajustar esta tasa)
 
     // Comprobar si es un número válido
