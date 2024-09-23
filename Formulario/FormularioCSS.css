@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c00202; /* Fondo de la página */
+
+}
+
+form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+}
+
+.fieldset-wrapper {
+    margin: 20px 0; /* Margen superior e inferior de 20px */
+}
+
+fieldset {
+    border: 1px solid #2d08ff; /* Borde del fieldset */
+    padding: 20px; /* Espacio interno del fieldset */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.fieldset1 {
+    background-color: #700000; /* Fondo rojo para fieldset1 */
+    color: white; /* Texto blanco */
+}
+
+.legend1 {
+    text-align: center; /* Centra el texto del legend */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: block; /* Cambia a bloque para centrar correctamente */
+    font-weight: bold; /* Negrita para el legend */
+    color: #2d08ff; /* Texto del legend en blanco */
+}
+
+.legend2 {
+    text-align: center; /* Centra el texto del legend */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: block; /* Cambia a bloque para centrar correctamente */
+    font-weight: bold; /* Negrita para el legend */
+    color: #2d08ff; /* Texto del legend en blanco */
+}
+
+.fieldset2 {
+    background-color: #900000; /* Fondo rojo claro para fieldset2 */
+    color: white; /* Texto blanco */
+}
+
+.legend3 {
+    text-align: center; /* Centra el texto del legend */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: block; /* Cambia a bloque para centrar correctamente */
+    font-weight: bold; /* Negrita para el legend */
+    color: #2d08ff; /* Texto del legend en blanco */
+}
+
+.fieldset3 {
+    background-color: #a70202; /* Fondo rojo claro para fieldset2 */
+    color: white; /* Texto blanco */
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: calc(100% - 40px); /* Ancho total menos el margen */
+}
+
+.form-group label {
+    flex: 1; /* Toma el 50% del ancho */
+    margin-right: 10px; /* Espacio entre la etiqueta y el campo */
+}
+
+.form-group input {
+    flex: 2; /* Toma el resto del espacio */
+    padding: 5px; /* Espaciado interno del campo */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+}
+
+button {
+    margin-top: 20px; /* Margen superior para el botón */
+    padding: 10px 15px; /* Espaciado interno del botón */
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup/Scaleup Registration Form</title>
+    <link rel="stylesheet" href="FormularioCSS.css">
+</head>
+<body>
+
+    <h1>Startup/Scaleup Registration Form</h1>
+
+    <form action="/submit" method="post">
+        <div class="fieldset-wrapper">
+            <legend class="legend1">BASIC INFORMATION</legend>
+            <fieldset class="fieldset1">
+
+                <div class="form-group">
+                    <label for="startup_name">Name of the Startup/Scaleup *</label>
+                    <input type="text" id="startup_name" name="startup_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact1_name">Contact Person 1 *</label>
+                    <input type="text" id="contact1_name" name="contact1_name" placeholder="Name and second name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position1">Position *</label>
+                    <input type="text" id="position1" name="position1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email1">Email 1 *</label>
+                    <input type="email" id="email1" name="email1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone1">Phone *</label>
+                    <input type="tel" id="phone1" name="phone1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact2_name">Contact Person 2 *</label>
+                    <input type="text" id="contact2_name" name="contact2_name" placeholder="Name and second name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position2">Position *</label>
+                    <input type="text" id="position2" name="position2" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email2">Email 2 *</label>
+                    <input type="email" id="email2" name="email2" required>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="fieldset-wrapper">
+            <legend class="legend2">ADDITIONAL MEMBERS</legend>
+            <fieldset class="fieldset2">
+
+                <div class="form-group">
+                    <label for="contact3_name">Contact Person 3</label>
+                    <input type="text" id="contact3_name" name="contact3_name" placeholder="Name and second name">
+                </div>
+
+                <div class="form-group">
+                    <label for="position3">Position 3</label>
+                    <input type="text" id="position3" name="position3">
+                </div>
+
+                <div class="form-group">
+                    <label for="email3">Email 3</label>
+                    <input type="email" id="email3" name="email3">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact4_name">Contact Person 4</label>
+                    <input type="text" id="contact4_name" name="contact4_name" placeholder="Name and second name">
+                </div>
+
+                <div class="form-group">
+                    <label for="position4">Position 4</label>
+                    <input type="text" id="position4" name="position4">
+                </div>
+
+                <div class="form-group">
+                    <label for="email4">Email 4</label>
+                    <input type="email" id="email4" name="email4">
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="fieldset-wrapper">
+            <legend class = "legend3">COMPANY INFORMATION</legend>
+            <fieldset class = "fieldset3">
+
+                <div class="form-group">
+                    <label for="members">Number of company members:</label>
+                    <input type="number" id="members" name="members" min="1">
+                </div>
+            </fieldset>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
