@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup/Scaleup Registration Form</title>
     <link rel="stylesheet" href="FormularioCSS.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <h1>Startup/Scaleup Registration Form</h1>
+    <h1>STARTUP/SCALEUP REGISTRATION FORM</h1>
 
     <form action="/submit" method="post">
+        <!-- BASIC INFORMATION FIELDSET -->
         <div class="fieldset-wrapper">
-            <legend class="legend1">BASIC INFORMATION</legend>
             <fieldset class="fieldset1">
-
+                <legend class="legend1">BASIC INFORMATION</legend>
                 <div class="form-group">
                     <label for="startup_name">Name of the Startup/Scaleup *</label>
                     <input type="text" id="startup_name" name="startup_name" required>
@@ -49,18 +49,13 @@
                     <label for="position2">Position *</label>
                     <input type="text" id="position2" name="position2" required>
                 </div>
-
-                <div class="form-group">
-                    <label for="email2">Email 2 *</label>
-                    <input type="email" id="email2" name="email2" required>
-                </div>
             </fieldset>
         </div>
 
+        <!-- ADDITIONAL MEMBERS FIELDSET -->
         <div class="fieldset-wrapper">
-            <legend class="legend2">ADDITIONAL MEMBERS</legend>
             <fieldset class="fieldset2">
-
+                <legend class="legend2">ADDITIONAL MEMBERS</legend>
                 <div class="form-group">
                     <label for="contact3_name">Contact Person 3</label>
                     <input type="text" id="contact3_name" name="contact3_name" placeholder="Name and second name">
@@ -90,22 +85,70 @@
                     <label for="email4">Email 4</label>
                     <input type="email" id="email4" name="email4">
                 </div>
+                <div class="form-group">
+                    <label for="email2">Email 2 *</label>
+                    <input type="email" id="email2" name="email2" required>
+                </div>
             </fieldset>
         </div>
+        
+        <h2>BAJA EL PARO...............................103-104</h2>
 
+        <!-- COMPANY INFORMATION FIELDSET -->
         <div class="fieldset-wrapper">
-            <legend class = "legend3">COMPANY INFORMATION</legend>
-            <fieldset class = "fieldset3">
-
+            <fieldset class="fieldset3">
+                <legend class="legend3">COMPANY INFORMATION</legend>
                 <div class="form-group">
                     <label for="members">Number of company members:</label>
                     <input type="number" id="members" name="members" min="1">
                 </div>
+
+                <div class="form-group">
+                    <label for="description">Description of the Startup/Scaleup *</label>
+                    <textarea id="description" name="description" placeholder="Describe your startup in a tweet. Max 200 words." rows="4" maxlength="200" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="vertical1">Vertical 1 (Choose one option) *</label>
+                    <select id="vertical1" name="vertical1" required>
+                        <option value="">Select an option</option>
+                        <!-- Añadir opciones aquí -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="technology1">Technology 1 (Choose one option) *</label>
+                    <select id="technology1" name="technology1" required>
+                        <option value="">Select an option</option>
+                        <!-- Añadir opciones aquí -->
+                    </select>
+                </div>
             </fieldset>
         </div>
 
-        <button type="submit">Submit</button>
-    </form>
+        <!-- STARTUP DATA FIELDSET -->
+        <div class="fieldset-wrapper">
+            <fieldset class="fieldset4">
+                <legend class="legend4">STARTUP DATA</legend>
+                <p>Note: The data will be made publicly available on the website and app.</p>
 
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country *</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website *</label>
+                    <input type="url" id="website" name="website" placeholder="https://startupole.eu/" required>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <button type="submit">Submit</button>
 </body>
 </html>
