@@ -1,75 +1,127 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #c00202; /* Fondo de la página */
+    font-family: 'VT323', monospace; /* Aplica la fuente VT323 a toda la página */
+    background-color: #1f006e; /* Fondo de la página */
+}
 
+h1, legend, label {
+    font-family: 'VT323', monospace; /* Aplica la fuente VT323 a los encabezados, leyendas y etiquetas */   
+}
+
+h1 {
+    border: 1px solid black;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    text-align: center;
+    font-weight: bold;
+    background-color: #0004f1;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+/* Ajustes para que el h2 no tenga márgenes */
+h2 {
+    grid-column: 1 / -1; /* Hace que el h2 ocupe ambas columnas en el grid */
+    text-align: center; /* Centra el texto */
+    font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
+    padding: 0; /* Elimina el espaciado interno */
+    margin: 0; /* Elimina el margen superior e inferior */
+    background-color: #ffffff; /* Fondo blanco para destacar el h2 */
+    border: 1px solid #ccc; /* Borde opcional */
+    border-radius: 10px; /* Bordes redondeados opcionales */
 }
 
 form {
+<<<<<<< HEAD
     max-width: 700px; /* Ancho máximo del formulario */
+=======
+    max-width: 1200px; /* Ancho máximo más amplio para que los fieldsets quepan cómodamente */
+>>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
     margin: 0 auto; /* Centra el formulario en la página */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    grid-gap: 20px; /* Espacio entre las columnas */
 }
 
+/* Ajustes para los fieldset para que se mantengan alineados */
 .fieldset-wrapper {
+<<<<<<< HEAD
     margin: 20px; /* Margen superior e inferior de 20px */
+=======
+    width: 100%;
+    margin: 0; /* Elimina el margen inferior entre fieldsets */
+>>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
 }
 
+/* Asegúrate de mantener los estilos existentes para los fieldsets y legends */
 fieldset {
-    border: 1px solid #ffef08; /* Borde del fieldset */
-    padding: 20px; /* Espacio interno del fieldset */
-    border-radius: 10px; /* Esquinas redondeadas */
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 10px;
 }
 
+/* Colores para los fieldsets */
 .fieldset1 {
-    background-color: #700000; /* Fondo rojo para fieldset1 */
-    color: white; /* Texto blanco */
-}
-
-.legend1 {
-    text-align: center; /* Centra el texto del legend */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    display: block; /* Cambia a bloque para centrar correctamente */
-    font-weight: bold; /* Negrita para el legend */
-    color: #2d08ff; /* Texto del legend en blanco */
-}
-
-.legend2 {
-    text-align: center; /* Centra el texto del legend */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    display: block; /* Cambia a bloque para centrar correctamente */
-    font-weight: bold; /* Negrita para el legend */
-    color: #2d08ff; /* Texto del legend en blanco */
+    background-color: #e00000; /* Color para el fieldset de información básica */
+    color:#ffffff;
 }
 
 .fieldset2 {
-    background-color: #900000; /* Fondo rojo claro para fieldset2 */
-    color: white; /* Texto blanco */
-}
-
-.legend3 {
-    text-align: center; /* Centra el texto del legend */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    display: block; /* Cambia a bloque para centrar correctamente */
-    font-weight: bold; /* Negrita para el legend */
-    color: #2d08ff; /* Texto del legend en blanco */
+    background-color: #1cd40bdf; /* Color para el fieldset de miembros adicionales */
+    color:#1802c0;
 }
 
 .fieldset3 {
-    background-color: #a70202; /* Fondo rojo claro para fieldset2 */
-    color: white; /* Texto blanco */
+    background-color: #fbec18; /* Color para el fieldset de información de la compañía */
+    color:#d40404;
 }
 
+.fieldset4 {
+    background-color: #3efffc; /* Color para el fieldset de datos de la startup */
+    color: #1802c0;
+}
+
+/* Leyendas dentro de los fieldsets */
+legend {
+    text-align: center; /* Centra el texto */
+    font-weight: bold; /* Mantiene el texto en negrita */
+    color: #2d08ff; /* Color del texto */
+    background-color: white; /* Fondo blanco para los legend */
+    margin: 0; /* Elimina margen alrededor del legend */
+    padding: 2px; /* Elimina padding interno */
+    border: 1px solid; /* Elimina el borde del legend */
+    border-radius: 3px;
+}
+
+.legend1 {
+    color:#1833fb;
+    
+}
+
+.legend2 {
+    color:#fbec18;
+}
+
+.legend3 {
+    color:rgb(78, 44, 3);
+}
+
+.legend4 {
+    color:#d40404;
+}
+
+/* Ajustes para los inputs y los form-group */
 .form-group {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    width: calc(100% - 40px); /* Ancho total menos el margen */
 }
 
 .form-group label {
-    flex: 1; /* Toma el 50% del ancho */
-    margin-right: 10px; /* Espacio entre la etiqueta y el campo */
+    flex: 1;
+    margin-right: 10px;
 }
 
+<<<<<<< HEAD
 .form-group input {
     flex: 2; /* Toma el resto del espacio */
     padding: 10px; /* Espaciado interno del campo */
@@ -80,24 +132,42 @@ fieldset {
     text-align: right; /* Ajusta el contenido del input hacia la derecha */
     transition: border 0.3s ease; /* Transición suave para el borde */
     width: 100%; /* Asegura que el input ocupe todo el espacio a la derecha */
+=======
+.form-group input,
+.form-group textarea,
+.form-group select {
+    flex: 2;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #030ee9;
+    width: 100%;
+>>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
 }
 
-.form-group input:focus {
-    border: 2px solid #ffef08; /* Borde amarillo en hover y focus */
-    outline: none; /* Elimina el borde de enfoque predeterminado */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border: 2px solid #ffef08;
+    outline: none;
 }
-
 
 button {
-    margin-top: 20px; /* Margen superior para el botón */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    border-radius: 10px; /* Bordes redondeados para el botón */
-    border: none; /* Sin borde */
-    background-color: #2d08ff; /* Fondo azul para el botón */
-    color: white; /* Texto blanco en el botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin: 20px 0; /* Espacio superior para separación */
+    padding: 10px 55px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2d08ff;
+    color: white;
+    cursor: pointer;
+    font-family: 'VT323', monospace; /* Aplica la misma fuente */
+    font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
+    transition: background-color 0.3s; /* Transición para efectos de hover */
 }
 
 button:hover {
+<<<<<<< HEAD
     background-color: #0056b3; /* Azul más oscuro cuando el mouse pasa sobre el botón */
+=======
+    background-color:darkgreen; /* Cambia el color al pasar el mouse */
+>>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
 }
