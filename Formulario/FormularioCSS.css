@@ -31,11 +31,7 @@ h2 {
 }
 
 form {
-<<<<<<< HEAD
-    max-width: 700px; /* Ancho máximo del formulario */
-=======
     max-width: 1200px; /* Ancho máximo más amplio para que los fieldsets quepan cómodamente */
->>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
     margin: 0 auto; /* Centra el formulario en la página */
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
@@ -44,12 +40,8 @@ form {
 
 /* Ajustes para los fieldset para que se mantengan alineados */
 .fieldset-wrapper {
-<<<<<<< HEAD
-    margin: 20px; /* Margen superior e inferior de 20px */
-=======
     width: 100%;
     margin: 0; /* Elimina el margen inferior entre fieldsets */
->>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
 }
 
 /* Asegúrate de mantener los estilos existentes para los fieldsets y legends */
@@ -94,7 +86,6 @@ legend {
 
 .legend1 {
     color:#1833fb;
-    
 }
 
 .legend2 {
@@ -121,18 +112,6 @@ legend {
     margin-right: 10px;
 }
 
-<<<<<<< HEAD
-.form-group input {
-    flex: 2; /* Toma el resto del espacio */
-    padding: 10px; /* Espaciado interno del campo */
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-    width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
-    border-radius: 10px; /* Bordes redondeados */
-    border: 1px solid #ccc; /* Color del borde */
-    text-align: right; /* Ajusta el contenido del input hacia la derecha */
-    transition: border 0.3s ease; /* Transición suave para el borde */
-    width: 100%; /* Asegura que el input ocupe todo el espacio a la derecha */
-=======
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -141,7 +120,6 @@ legend {
     border-radius: 10px;
     border: 1px solid #030ee9;
     width: 100%;
->>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
 }
 
 .form-group input:focus,
@@ -165,9 +143,5 @@ button {
 }
 
 button:hover {
-<<<<<<< HEAD
-    background-color: #0056b3; /* Azul más oscuro cuando el mouse pasa sobre el botón */
-=======
-    background-color:darkgreen; /* Cambia el color al pasar el mouse */
->>>>>>> e8c64ae4c4c74d507d1f64b6302ff3ded4c6af77
+    background-color: darkgreen; /* Cambia el color al pasar el mouse */
 }
