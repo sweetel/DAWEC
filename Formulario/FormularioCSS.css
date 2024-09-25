@@ -129,19 +129,57 @@ legend {
     outline: none;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Añade un espacio entre los botones */
+    margin-top: 20px; /* Margen superior para separar los botones del contenido anterior */
+}
+
 button {
-    margin: 20px 0; /* Espacio superior para separación */
-    padding: 10px 55px;
+    margin: 0 50px; /* Elimina el margen superior/inferior para los botones dentro del contenedor */
+    padding: 10px 60px; /* Ajusta el tamaño del padding según sea necesario */
     border-radius: 10px;
     border: none;
     background-color: #2d08ff;
     color: white;
     cursor: pointer;
-    font-family: 'VT323', monospace; /* Aplica la misma fuente */
-    font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
-    transition: background-color 0.3s; /* Transición para efectos de hover */
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: darkgreen; /* Cambia el color al pasar el mouse */
+}
+
+.legend1:hover {
+    color: #ffef08;
+}
+
+.legend2:hover {
+    color: #e00000;
+}
+
+.legend3:hover {
+    color: #2d08ff;
+}
+
+.legend4:hover {
+    color: rgb(78, 44, 3);
+}
+
+#date-time-button {
+    padding: 10px 60px; /* Asegúrate de que ambos botones tengan el mismo tamaño */
+    border-radius: 10px;
+    border: none;
+    background-color: #2d08ff;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#date-time-button:hover {
+    background-color: darkgreen;
 }
