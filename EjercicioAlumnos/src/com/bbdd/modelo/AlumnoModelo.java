@@ -1,3 +1,4 @@
+package com.bbdd.modelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -5,20 +6,26 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bbdd.dto.AlumnoDTO;
+import com.bbdd.utils.DBUtils;
+
 public class AlumnoModelo {
 
 	
-	public Integer insertarAlumno(String nombre, String DNI)
+	public Integer insertarAlumno(String nombre, String apellido, String edad, String DNI, String sexo)
 			throws ClassNotFoundException, SQLException {
 
 		Connection con = DBUtils.obtenerConexionBBDD();
 
-		String insertInscripcion = "INSERT INTO alumnos (nombre, DNI)" + "VALUES (?, ?)";
+		String insertInscripcion = "INSERT INTO alumnos (nombre, apellido, edad, DNI, sexo)" + "VALUES (?, ?, ?, ?, ?)";
 
 		PreparedStatement psInsertInscripcion = con.prepareStatement(insertInscripcion);
 
 		psInsertInscripcion.setString(1, nombre);
-		psInsertInscripcion.setString(2, DNI);
+		psInsertInscripcion.setString(2, apellido);
+		psInsertInscripcion.setString(3, edad);
+		psInsertInscripcion.setString(4, DNI);
+		psInsertInscripcion.setString(5, sexo);
 
 		Integer resultado = psInsertInscripcion.executeUpdate();
 
@@ -27,7 +34,7 @@ public class AlumnoModelo {
 		return resultado;
 	}
 	
-	public List<AlumnoDTO> consultaInscripcionConFiltros(String nombre, String apellido, String edad,
+	public List<AlumnoDTO> consultaAlumnoConFiltros(String nombre, String apellido, String edad,
 			String DNI, String sexo) throws ClassNotFoundException, SQLException {
 
 		Connection con = DBUtils.obtenerConexionBBDD();

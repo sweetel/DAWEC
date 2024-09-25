@@ -1,3 +1,4 @@
+package com.bbdd.dto;
 
 public class AlumnoDTO {
 
