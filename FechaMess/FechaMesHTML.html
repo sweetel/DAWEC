@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Fecha</title>
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="FechaMesJS.js" defer></script>
+</head>
+<body>
+    <h1>Introduce la Fecha</h1>
+    
+    <!-- Formularios para ingresar día, mes y año -->
+    <label for="dia">Día: </label>
+    <input type="number" id="dia" placeholder="25"><br><br>
+
+    <label for="mes">Mes: </label>
+    <input type="text" id="mes" placeholder="Julio"><br><br>
+
+    <label for="año">Año: </label>
+    <input type="number" id="año" placeholder="2020"><br><br>
+
+    <!-- Botón para activar la función -->
+    <button onclick="mostrarFecha()">Mostrar Fecha</button>
+
+    <!-- Donde se mostrará el resultado -->
+    <p id="resultado"></p>
+</body>
+</html>

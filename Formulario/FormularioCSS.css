@@ -5,12 +5,12 @@ body {
 }
 
 form {
-    max-width: 600px; /* Ancho máximo del formulario */
+    max-width: 700px; /* Ancho máximo del formulario */
     margin: 0 auto; /* Centra el formulario en la página */
 }
 
 .fieldset-wrapper {
-    margin: 20px 0; /* Margen superior e inferior de 20px */
+    margin: 20px; /* Margen superior e inferior de 20px */
 }
 
 fieldset {
@@ -72,11 +72,14 @@ fieldset {
 
 .form-group input {
     flex: 2; /* Toma el resto del espacio */
-    padding: 5px; /* Espaciado interno del campo */
+    padding: 10px; /* Espaciado interno del campo */
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
     border-radius: 10px; /* Bordes redondeados */
     border: 1px solid #ccc; /* Color del borde */
+    text-align: right; /* Ajusta el contenido del input hacia la derecha */
+    transition: border 0.3s ease; /* Transición suave para el borde */
+    width: 100%; /* Asegura que el input ocupe todo el espacio a la derecha */
 }
 
 .form-group input:focus {
@@ -93,4 +96,8 @@ button {
     background-color: #2d08ff; /* Fondo azul para el botón */
     color: white; /* Texto blanco en el botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro cuando el mouse pasa sobre el botón */
 }
