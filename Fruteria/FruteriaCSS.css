@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px; /* Ajustar el ancho máximo de la página */
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+.gallery {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos */
+    margin: 10px 0;
+    width: 100%; /* Asegura que la fila ocupe todo el ancho */
+}
+
+.item {
+    flex: 1; /* Asegura que cada item ocupe el mismo espacio */
+    margin: 0 10px; /* Margen entre items */
+    text-align: center; /* Alinear texto centrado debajo de la imagen */
+}
+
+.item img {
+    width: 100%; /* Ajusta el tamaño de la imagen para ocupar el ancho del item */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 150px; /* Tamaño máximo de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.2s; /* Animación al pasar el ratón */
+}
+
+.item img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+p {
+    margin-top: 5px;
+    color: #555; /* Color del texto descriptivo */
+}
