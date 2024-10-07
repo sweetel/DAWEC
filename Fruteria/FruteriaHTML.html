@@ -8,51 +8,96 @@
 </head>
 <body>
     <div class="container">
-        <h1>Frutería</h1>
+        <h1>FRUTERIA</h1>
         <div class="gallery">
             <div class="row">
-                <div class="item">
+                <div class="item" data-name="Fruta 1" data-price="5">
                     <img src="https://via.placeholder.com/150" alt="Fruta 1">
-                    <p>Fruta 1</p>
+                    <div class="text-box">
+                        <p>Fruta 1</p>
+                        <p class="price">5€/KG</p>
+                    </div>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Fruta 2" data-price="4">
                     <img src="https://via.placeholder.com/150" alt="Fruta 2">
-                    <p>Fruta 2</p>
+                    <div class="text-box">
+                        <p>Fruta 2</p>
+                        <p class="price">4€/KG</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="https://via.placeholder.com/150" alt="Fruta 3">
-                    <p>Fruta 3</p>
+                <div class="item" data-name="Fresa" data-price="9">
+                    <img src="https://via.placeholder.com/150" alt="Fresa">
+                    <div class="text-box">
+                        <p>Fresa</p>
+                        <p class="price">9€/KG</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="item">
+                <div class="item" data-name="Fruta 4" data-price="3">
                     <img src="https://via.placeholder.com/150" alt="Fruta 4">
-                    <p>Fruta 4</p>
+                    <div class="text-box">
+                        <p>Fruta 4</p>
+                        <p class="price">3€/KG</p>
+                    </div>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Fruta 5" data-price="7">
                     <img src="https://via.placeholder.com/150" alt="Fruta 5">
-                    <p>Fruta 5</p>
-                </div>
-                <div class="item">
-                    <img src="https://via.placeholder.com/150" alt="Fruta 6">
-                    <p>Fruta 6</p>
+                    <div class="text-box">
+                        <p>Fruta 5</p>
+                        <p class="price">7€/KG</p>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="item">
+                <div class="item" data-name="Fruta 6" data-price="6">
+                    <img src="https://via.placeholder.com/150" alt="Fruta 6">
+                    <div class="text-box">
+                        <p>Fruta 6</p>
+                        <p class="price">6€/KG</p>
+                    </div>
+                </div>
+                <div class="item" data-name="Fruta 7" data-price="8">
                     <img src="https://via.placeholder.com/150" alt="Fruta 7">
-                    <p>Fruta 7</p>
+                    <div class="text-box">
+                        <p>Fruta 7</p>
+                        <p class="price">8€/KG</p>
+                    </div>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Fruta 8" data-price="2">
                     <img src="https://via.placeholder.com/150" alt="Fruta 8">
-                    <p>Fruta 8</p>
+                    <div class="text-box">
+                        <p>Fruta 8</p>
+                        <p class="price">2€/KG</p>
+                    </div>
                 </div>
-                <div class="item">
+                <div class="item" data-name="Fruta 9" data-price="5">
                     <img src="https://via.placeholder.com/150" alt="Fruta 9">
-                    <p>Fruta 9</p>
+                    <div class="text-box">
+                        <p>Fruta 9</p>
+                        <p class="price">5€/KG</p>
+                    </div>
+                </div>
+                <div class="item" data-name="Fruta 10" data-price="3">
+                    <img src="https://via.placeholder.com/150" alt="Fruta 10">
+                    <div class="text-box">
+                        <p>Fruta 10</p>
+                        <p class="price">3€/KG</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Botón para finalizar el pedido -->
+        <button id="finalizar-pedido">Finalizar Pedido</button>
+
+        <!-- Contenedor visible para el resumen de la compra -->
+        <div id="resumen-pedido" class="hidden">
+            <h2>Resumen del Pedido</h2>
+            <ul id="productos-seleccionados"></ul>
+            <p id="precio-total"></p>
+            <p id="precio-medio"></p>
+        </div>        
     </div>
+
+    <script src="FruteriaJS.js"></script>
 </body>
 </html>

@@ -1,50 +1,148 @@
+/* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Courier New", monospace;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #0900A7;
+    background-image: url('frutas.avif'); /* Ruta de la imagen */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* La imagen queda fija al hacer scroll */
 }
 
 .container {
-    max-width: 1200px; /* Ajustar el ancho máximo de la página */
-    margin: 20px auto;
-    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
+
 
 h1 {
-    color: #4CAF50;
+    text-align: center;
+    color: #ffffff;
 }
 
+/* Estilo de la galería de frutas */
 .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin-top: 20px;
 }
 
 .row {
     display: flex;
-    justify-content: space-between; /* Espacio entre elementos */
-    margin: 10px 0;
-    width: 100%; /* Asegura que la fila ocupe todo el ancho */
+    justify-content: space-around;
+    gap: 15px;
 }
 
 .item {
-    flex: 1; /* Asegura que cada item ocupe el mismo espacio */
-    margin: 0 10px; /* Margen entre items */
-    text-align: center; /* Alinear texto centrado debajo de la imagen */
+    width: 180px;
+    text-align: center;
+    background-color:#57e471;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
+
+.item:hover {
+    transform: scale(1.05);
+    color:#002FA7;
+    background-color: #97e65a;
+}
+
 
 .item img {
-    width: 100%; /* Ajusta el tamaño de la imagen para ocupar el ancho del item */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 150px; /* Tamaño máximo de la imagen */
-    border-radius: 10px; /* Bordes redondeados */
-    transition: transform 0.2s; /* Animación al pasar el ratón */
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
 }
 
-.item img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+.item:hover .text-box {
+    background-color: #57e471;
 }
 
-p {
-    margin-top: 5px;
-    color: #555; /* Color del texto descriptivo */
+/* Estilo del texto en las tarjetas */
+.text-box {
+    border: 1px solid #002FA7;
+    background-color: #97e65a;
+    padding-top: 10px;
+}
+
+.text-box p {
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: bold;
+}
+
+/* Botón para finalizar el pedido */
+#finalizar-pedido {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: #0000c1;
+    color: white;
+    font-size: 16px;
+    font-family: "Courier New", monospace;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#finalizar-pedido:hover {
+    background-color:#b9ccfd;
+    color:#002FA7;
+}
+
+/* Estilos para el resumen del pedido */
+#resumen-pedido {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #b9ccfd;
+}
+
+#resumen-pedido:hover {
+    background-color: #f0f77b;
+}
+
+#resumen-pedido h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+#productos-seleccionados {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#productos-seleccionados li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+#precio-total, #precio-medio {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilo para ocultar el resumen cuando no se ha finalizado el pedido */
+.hidden {
+    display: none;
 }
