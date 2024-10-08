@@ -1,22 +1,20 @@
-function mostrarNotas() {
+function calcularNotaMedia() {
+    // Pedir al usuario que introduzca las notas separadas por comas
+    let entrada = prompt("Introduce las notas separadas por comas:");
+    
+    // Convertir la cadena de texto en un array de números
+    let notas = entrada.split(",").map(Number);
 
-    const input = prompt("introduce notas separadas por coma");
+    // Calcular la suma de las notas
+    let suma = notas.reduce((total, nota) => total + nota, 0);
 
-    if(!input) {
-        alert("no has introducido ninguna nota");
-        return;
-    }
+    // Calcular la media
+    let media = suma / notas.length;
 
-      // Dividimos la cadena por el carácter "/"
-      let valores = input.split(",");
+    // Mostrar la media por consola
+    console.log("La nota media es: " + media.toFixed(2));
+}
 
-  
-
-  
-      // Unimos los valores ordenados con el carácter "-"
-      const resultado = valores.join("");
-  
-      // Mostramos el resultado en la consola
-      console.log("Valores ordenados: " + resultado);
-} 
-mostrarNotas();
+// Llamar a la función
+calcularNotaMedia();
+ 
