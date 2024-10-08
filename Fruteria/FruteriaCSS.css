@@ -18,7 +18,6 @@ body {
     padding: 20px;
 }
 
-
 h1 {
     text-align: center;
     color: #ffffff;
@@ -34,14 +33,16 @@ h1 {
 
 .row {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
+    justify-content: space-around; /* Distribuir el espacio entre las tarjetas */
     gap: 15px;
 }
 
 .item {
-    width: 180px;
+    flex: 1 1 calc(33.33% - 30px); /* 3 items por fila, ajustable según el tamaño */
+    max-width: 180px; /* Limitar el ancho máximo */
     text-align: center;
-    background-color:#57e471;
+    background-color: #57e471;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
@@ -52,24 +53,18 @@ h1 {
 
 .item:hover {
     transform: scale(1.05);
-    color:#002FA7;
+    color: #002FA7;
     background-color: #97e65a;
 }
 
-
 .item img {
-    width: 180px;
-    height: 150px;
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción */
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 8px;
 }
 
-.item:hover .text-box {
-    background-color: #57e471;
-}
-
-/* Estilo del texto en las tarjetas */
 .text-box {
     border: 1px solid #002FA7;
     background-color: #97e65a;
@@ -87,7 +82,8 @@ h1 {
 /* Botón para finalizar el pedido */
 #finalizar-pedido {
     display: block;
-    width: 200px;
+    width: 100%; /* Botón ocupa el 100% del ancho */
+    max-width: 200px; /* Ancho máximo del botón */
     margin: 30px auto;
     padding: 10px;
     background-color: #0000c1;
@@ -101,8 +97,8 @@ h1 {
 }
 
 #finalizar-pedido:hover {
-    background-color:#b9ccfd;
-    color:#002FA7;
+    background-color: #b9ccfd;
+    color: #002FA7;
 }
 
 /* Estilos para el resumen del pedido */
@@ -136,7 +132,8 @@ h1 {
     color: #555;
 }
 
-#precio-total, #precio-medio {
+#precio-total,
+#precio-medio {
     font-weight: bold;
     font-size: 18px;
     color: #333;
@@ -145,4 +142,21 @@ h1 {
 /* Estilo para ocultar el resumen cuando no se ha finalizado el pedido */
 .hidden {
     display: none;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 calc(50% - 20px); /* 2 items por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        flex: 1 1 100%; /* 1 item por fila en pantallas muy pequeñas */
+    }
+
+    #finalizar-pedido {
+        width: 100%; /* Botón ocupa el 100% del ancho en móviles */
+    }
 }
