@@ -5,6 +5,11 @@ function calcularCubo() {
     // Obtenemos el valor ingresado por el usuario
     const numero = document.getElementById("numero").value;
 
+    if (!numero || !Number.isInteger(numero)) {
+        alert("Por favor, introduce un numero entero.");
+        return;
+    }
+
     // Convertimos el valor a número y calculamos el cubo
     const resultado = cubo(Number(numero));
 

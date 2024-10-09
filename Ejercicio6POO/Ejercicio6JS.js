@@ -13,6 +13,7 @@ function calcularNotaMedia() {
 
     // Mostrar la media por consola
     console.log("La nota media es: " + media.toFixed(2));
+    console.log("La nota media con 1 decimal es: " + media.toFixed(1));
 }
 
 // Llamar a la función
